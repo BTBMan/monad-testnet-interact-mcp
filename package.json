@@ -1,0 +1,20 @@
+{
+  "name": "monad-testnet-interact-mcp",
+  "version": "0.0.1",
+  "description": "A MCP server for interacting with the Monad Testnet",
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.2",
+    "typescript": "^5.8.3",
+    "viem": "^2.29.2",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18"
+  }
+}
