@@ -1,7 +1,8 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 import { publicChain } from '../config/chain.js';
-import { Address } from 'viem';
+import { Address, formatEther } from 'viem';
+import { MONAD_CURRENCY } from '../shared/constants.js';
 
 export const getBalance = (server: McpServer) => {
   server.tool(
@@ -19,7 +20,9 @@ export const getBalance = (server: McpServer) => {
         content: [
           {
             type: 'text',
-            text: `The balance of ${address} is ${balance}`,
+            text: `The balance of ${address} is ${formatEther(balance)} ${
+              MONAD_CURRENCY.symbol
+            }`,
           },
         ],
       };
